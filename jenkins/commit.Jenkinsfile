@@ -15,15 +15,9 @@ pipeline {
         stage("Build Image") {
             steps {
 
-                sh 'ng build'
                 sh 'oc start-build hello-openshift-app --from-dir .'
-                openshiftVerifyBuild bldCfg: "hello-openshift-app", namespace: "hello-openshift", waitTime: '20', waitUnit: 'min'
-            }
-        }
+                openshiftVerifyBuild bldCfg: "hello-openshift-app-docker", namespace: "hello-openshift", waitTime: '20', waitUnit: 'min'
 
-        stage("Deploy") {
-            steps {
-                openshiftDeploy depCfg: "greenengage-app", namespace: "hello-openshift"
             }
         }
     }
