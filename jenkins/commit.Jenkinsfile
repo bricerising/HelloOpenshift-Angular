@@ -17,7 +17,7 @@ pipeline {
 
                 sh """
                     npm install ; \
-                    $(npm bin)/ng build --base-href src
+                    \$(npm bin)/ng build --base-href src
                 """
 
                 sh 'oc start-build hello-openshift-app-docker --from-dir .'
