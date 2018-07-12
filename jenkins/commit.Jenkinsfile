@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'nodejs8'
+        label 'nodejs'
     }
     options {
         timeout(time: 20, unit: 'MINUTES')
