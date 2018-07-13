@@ -1,0 +1,1 @@
+docker build -t jenkins-slave-nodejs-8:latest $* .

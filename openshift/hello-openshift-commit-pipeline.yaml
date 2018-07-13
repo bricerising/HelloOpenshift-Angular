@@ -149,7 +149,7 @@ objects:
     - name: ${APP_NAME}-port
       port: 80
       protocol: TCP
-      targetPort: 8080
+      targetPort: 8081
     selector:
       app: ${APP_NAME}
       deploymentconfig: ${APP_NAME}

@@ -1,0 +1,6 @@
+Set up Jenkins:
+    oc new-app https://raw.githubusercontent.com/siamaksade/openshift-builds/master/jenkins-template/jenkins-persistent-template.yaml
+
+TODO:
+    Make a custom openshift jenkins slave for nodejs 8, based off of:
+        openshift/jenkins-slave-base-centos7
